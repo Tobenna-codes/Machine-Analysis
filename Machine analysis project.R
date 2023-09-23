@@ -14,6 +14,8 @@ summary(util)
 
 head(util, 12)
 
+# Converting the machine column to a factor
+
 util$Machine <- as.factor(util$Machine)
 
 summary(util)
@@ -64,7 +66,7 @@ RL1_list <- list('RL1', RL1_util_stats, util_under_90_flag)
 
 RL1_list
 
-# Well we could have assigned names to our list elements right away like
+# Well, we could have assigned names to our list components right away like
 # RL1_list <- list(Machine = 'RL1', Stats = RL1_util_stats, LowTreshold = util_under_90_flag)
 
 # Or we can give names after creating the list like
@@ -106,12 +108,12 @@ str(RL1_list)
 summary(RL1_list$Data)
 str(RL1_list$Data)
 
-# Creating our plot for all machines
+# Creating time series plot for utilization of all machines
 
 machine_plot <- ggplot(data = util,
                        aes(x = PosixTime, y = Utilization, color = Machine)) + 
                        geom_line(size = 0.73) + facet_grid(Machine~.) + 
-                       geom_hline(yintercept = 0.90, linetype = 2,size = 0.6, color = 'Red')+
+                       geom_hline(yintercept = 0.90, linetype = 2,size = 0.6, color = 'Red') +
                        labs(title = 'Machine Utilization Time Series')
 
 # Adding machine plot to our list
