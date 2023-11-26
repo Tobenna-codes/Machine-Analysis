@@ -26,5 +26,7 @@ We are required to deliver an R list with the following components:
 - Plot: For all machines
 
 ## Machine Utilization Time Series
+Showing where and when machines' utilization has gone below 90%
+
 ![Machine Utilization time series](https://github.com/Tobenna-codes/Machine-Analysis/assets/135149511/8056efb9-a754-469a-8479-6e26f350630b)
 
