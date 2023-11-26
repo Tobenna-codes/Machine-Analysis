@@ -13,14 +13,18 @@ given hour.
 
 We are required to deliver an R list with the following components:
 
-Character: Machine name
+- Character: Machine name
 
-Vector: (min, mean, max) utilisation for the month (excluding unknown hours)
+- Vector: (min, mean, max) utilisation for the month (excluding unknown hours)
 
-Logical: Has utilisation ever fallen below 90%? TRUE / FALSE
+- Logical: Has utilisation ever fallen below 90%? TRUE / FALSE
 
-Vector: All hours where utilisation is unknown (NA’s)
+- Vector: All hours where utilisation is unknown (NA’s)
 
-Dataframe: For this machine
+- Dataframe: For this machine
 
-Plot: For all machines
+- Plot: For all machines
+
+## Machine Utilization Time Series
+![Machine Utilization time series](https://github.com/Tobenna-codes/Machine-Analysis/assets/135149511/8056efb9-a754-469a-8479-6e26f350630b)
+
