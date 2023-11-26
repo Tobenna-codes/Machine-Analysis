@@ -30,3 +30,12 @@ Showing where and when machines' utilization has gone below 90%
 
 ![Machine Utilization time series](https://github.com/Tobenna-codes/Machine-Analysis/assets/135149511/8056efb9-a754-469a-8479-6e26f350630b)
 
+### Code for the plot
+
+```R
+machine_plot <- ggplot(data = util,
+                       aes(x = PosixTime, y = Utilization, color = Machine)) + 
+                       geom_line(size = 0.73) + facet_grid(Machine~.) + 
+                       geom_hline(yintercept = 0.90, linetype = 2,size = 0.6, color = 'Red') +
+                       labs(title = 'Machine Utilization Time Series')
+```
